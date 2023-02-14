@@ -19,6 +19,13 @@ final class FlickrImageResultCell: UICollectionViewCell {
         return imv
     }()
 
+    private lazy var titleLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .black
+        return lbl
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -35,7 +42,13 @@ final class FlickrImageResultCell: UICollectionViewCell {
 
     private func setLayout() {
         contentView.addSubview(resultImageView)
-        resultImageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        contentView.addSubview(titleLabel)
+
+        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+
+        resultImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
         resultImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         resultImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         resultImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
@@ -44,8 +57,9 @@ final class FlickrImageResultCell: UICollectionViewCell {
         resultImageView.heightAnchor.constraint(equalToConstant: .random(in: 100...600)).isActive = true
     }
 
-    public func fillOut(with data: Data) {
+    public func fillOut(with flickrPhoto: FlickrPhoto) {
         layoutIfNeeded()
+        titleLabel.text = flickrPhoto.title
     }
 
     override func prepareForReuse() {

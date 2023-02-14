@@ -16,10 +16,13 @@ struct FlickrAPI {
             URLQueryItem(name: "api_key", value: Constants.API_KEY),
             URLQueryItem(name: "method", value: "flickr.photos.search"),
             URLQueryItem(name: "text", value: searchTerm),
-            URLQueryItem(name: "format", value: "json")
+            URLQueryItem(name: "format", value: "json"),
+            URLQueryItem(name: "page", value: "1"),
+            URLQueryItem(name: "nojsoncallback", value: "1")
         ]
         var request = URLRequest(url: url, queryItems: queryItems)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
         request.httpMethod = "GET"
         return request
     }

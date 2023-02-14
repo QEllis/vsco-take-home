@@ -1,10 +1,12 @@
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
 
     private lazy var searchBar: UISearchBar = {
         let sb = UISearchBar()
         sb.translatesAutoresizingMaskIntoConstraints = false
+        sb.delegate = self
         sb.placeholder = "Search Flickr"
         return sb
     }()
@@ -18,10 +20,14 @@ class ViewController: UIViewController {
         return cv
     }()
 
+    @Published var imageSearch = FlickrImageSearch(queryString: "sunset")
+    private var subscribers: [AnyCancellable] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
         setLayout()
+        setSubscribers()
     }
 
     private func registerCells() {
@@ -43,6 +49,12 @@ class ViewController: UIViewController {
         resultsCV.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
+    private func setSubscribers() {
+        $imageSearch.flatMap({ $0.$results }).debounce(for: .milliseconds(100), scheduler: DispatchQueue.main).sink(receiveValue: { [weak self] flickrPhotos in
+            self?.resultsCV.reloadData()
+        }).store(in: &subscribers)
+    }
+
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -50,12 +62,20 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return imageSearch.results.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlickrImageResultCell.reuseIdentifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlickrImageResultCell.reuseIdentifier, for: indexPath) as? FlickrImageResultCell else { return UICollectionViewCell() }
+        guard imageSearch.results.count > indexPath.item else { return cell }
+        cell.fillOut(with: imageSearch.results[indexPath.item])
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item > imageSearch.results.count - 20 {
+            imageSearch.loadMore()
+        }
     }
 
 }
@@ -79,6 +99,16 @@ extension ViewController {
             return section
         }, configuration: configuration)
         return layout
+    }
+
+}
+
+// MARK: - UISearchBarDelegate
+
+extension ViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Start Search
     }
 
 }
