@@ -27,6 +27,8 @@
 		E4ECC48A299B2423005A37F8 /* FlickrImageResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */; };
 		E4ECC490299B2FEB005A37F8 /* FlickrImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC48F299B2FEB005A37F8 /* FlickrImageSearch.swift */; };
 		E4ECC491299B2FEB005A37F8 /* FlickrImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC48F299B2FEB005A37F8 /* FlickrImageSearch.swift */; };
+		E4ECC493299BFC9E005A37F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E4ECC492299BFC9E005A37F8 /* README.md */; };
+		E4ECC494299BFC9E005A37F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E4ECC492299BFC9E005A37F8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		5B9C9F4328EF8046004442E3 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageResultCell.swift; sourceTree = "<group>"; };
 		E4ECC48F299B2FEB005A37F8 /* FlickrImageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageSearch.swift; sourceTree = "<group>"; };
+		E4ECC492299BFC9E005A37F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 				5B15E60328F0E95C00F90A7C /* Assets.xcassets */,
 				5B15E60528F0E95C00F90A7C /* LaunchScreen.storyboard */,
 				5B15E60828F0E95C00F90A7C /* Info.plist */,
+				E4ECC492299BFC9E005A37F8 /* README.md */,
 			);
 			path = "VSCO-lite-uikit";
 			sourceTree = "<group>";
@@ -243,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4ECC493299BFC9E005A37F8 /* README.md in Resources */,
 				5B03CCC128EF510800AFA693 /* Preview Assets.xcassets in Resources */,
 				5B03CCBE28EF510800AFA693 /* Assets.xcassets in Resources */,
 			);
@@ -254,6 +259,7 @@
 			files = (
 				5B15E60728F0E95C00F90A7C /* LaunchScreen.storyboard in Resources */,
 				5B15E60428F0E95C00F90A7C /* Assets.xcassets in Resources */,
+				E4ECC494299BFC9E005A37F8 /* README.md in Resources */,
 				5B15E60228F0E95B00F90A7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
