@@ -14,8 +14,9 @@ struct FlickrPhoto: Equatable {
     let farm: Int
     let secret: String
     let server: String
-    let title: String
+    let title: String // Not used in display
 
+    /// Image URL String
     var imageUrl: String {
         "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
     }
@@ -46,6 +47,12 @@ final class FlickrImageSearch {
 
     @Published var results: [FlickrPhoto] = []
     @Published var requestInProgress = false
+    var hasMorePages: Bool {
+        if let totalPages = totalPages {
+            return totalPages >= nextPage
+        }
+        return true
+    }
 
     init(queryString: String, nextPage: Int = 1) {
         self.queryString = queryString
@@ -66,17 +73,13 @@ final class FlickrImageSearch {
                   let photoData = photos["photo"] as? [[String: Any]] else { return }
 
             self.totalPages = dict["pages"] as? Int
-            let flickrPhotos: [FlickrPhoto] = photoData.compactMap({
-                return FlickrPhoto(data: $0)
-            })
+
+            let flickrPhotos: [FlickrPhoto] = photoData.compactMap({ FlickrPhoto(data: $0) })
+
             self.nextPage += 1
             self.results.append(contentsOf: flickrPhotos)
             self.requestInProgress = false
         }
     }
 
-    public func hasMorePages() -> Bool {
-        guard let totalPages = totalPages else { return true }
-        return nextPage <= totalPages
-    }
 }

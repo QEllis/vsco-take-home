@@ -78,11 +78,11 @@ final class FlickrImageResultCell: UICollectionViewCell {
             return
         }
         resultImageView.image = image
-        layoutIfNeeded()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        // Cancel Image Data Task and clear image
         imageDataTask?.cancel()
         imageDataTask = nil
         resultImageView.image = nil
