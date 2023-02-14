@@ -19,3 +19,4 @@
 - I would store the currently displayed state of results and search when the user exits the app to display them as quickly as possible when launching the app later
 - Create some sort of action (download, post on twitter, etc.) for users to do with the image results
 - Would add error handling / user messages for malformed data returns, failures to fetch images, failure to fetch results
+- With how testing was addressed in the instructions README I just made a test target an super quick test example. Would do more testing with more time

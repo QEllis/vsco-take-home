@@ -29,7 +29,22 @@
 		E4ECC491299B2FEB005A37F8 /* FlickrImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC48F299B2FEB005A37F8 /* FlickrImageSearch.swift */; };
 		E4ECC493299BFC9E005A37F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E4ECC492299BFC9E005A37F8 /* README.md */; };
 		E4ECC494299BFC9E005A37F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E4ECC492299BFC9E005A37F8 /* README.md */; };
+		E4ECC4A0299C0585005A37F8 /* VSCO_lite_uikitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC49F299C0585005A37F8 /* VSCO_lite_uikitTests.swift */; };
+		E4ECC4A6299C05D3005A37F8 /* FlickrImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC48F299B2FEB005A37F8 /* FlickrImageSearch.swift */; };
+		E4ECC4A7299C0617005A37F8 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C9F4028EF8016004442E3 /* DataProvider.swift */; };
+		E4ECC4A8299C062F005A37F8 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C9F4328EF8046004442E3 /* FlickrAPI.swift */; };
+		E4ECC4A9299C06B2005A37F8 /* URRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B786528F7830B0096A395 /* URRequest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4ECC4A1299C0585005A37F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B03CCAE28EF50F000AFA693 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B15E5F728F0E95B00F90A7C;
+			remoteInfo = "VSCO-lite-uikit";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5B03CCB628EF50F000AFA693 /* VSCO-lite-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VSCO-lite-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +66,8 @@
 		E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageResultCell.swift; sourceTree = "<group>"; };
 		E4ECC48F299B2FEB005A37F8 /* FlickrImageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageSearch.swift; sourceTree = "<group>"; };
 		E4ECC492299BFC9E005A37F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E4ECC49D299C0585005A37F8 /* VSCO-lite-uikitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VSCO-lite-uikitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4ECC49F299C0585005A37F8 /* VSCO_lite_uikitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSCO_lite_uikitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4ECC49A299C0585005A37F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +101,7 @@
 				5B15E5F328F0E90600F90A7C /* Common */,
 				5B03CCB828EF50F000AFA693 /* VSCO-lite-swiftui */,
 				5B15E5F928F0E95B00F90A7C /* VSCO-lite-uikit */,
+				E4ECC49E299C0585005A37F8 /* VSCO-lite-uikitTests */,
 				5B03CCB728EF50F000AFA693 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +111,7 @@
 			children = (
 				5B03CCB628EF50F000AFA693 /* VSCO-lite-swiftui.app */,
 				5B15E5F828F0E95B00F90A7C /* VSCO-lite-uikit.app */,
+				E4ECC49D299C0585005A37F8 /* VSCO-lite-uikitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +141,7 @@
 				5B9C9F4028EF8016004442E3 /* DataProvider.swift */,
 				5B9C9F4228EF8037004442E3 /* API */,
 				5B4B786528F7830B0096A395 /* URRequest.swift */,
+				E4ECC48E299B2FDC005A37F8 /* Searches */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -122,7 +149,6 @@
 		5B15E5F928F0E95B00F90A7C /* VSCO-lite-uikit */ = {
 			isa = PBXGroup;
 			children = (
-				E4ECC48E299B2FDC005A37F8 /* Searches */,
 				E4ECC486299B2400005A37F8 /* Views */,
 				5B15E5FA28F0E95B00F90A7C /* AppDelegate.swift */,
 				5B15E5FC28F0E95B00F90A7C /* SceneDelegate.swift */,
@@ -168,6 +194,14 @@
 			path = Searches;
 			sourceTree = "<group>";
 		};
+		E4ECC49E299C0585005A37F8 /* VSCO-lite-uikitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4ECC49F299C0585005A37F8 /* VSCO_lite_uikitTests.swift */,
+			);
+			path = "VSCO-lite-uikitTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +239,24 @@
 			productReference = 5B15E5F828F0E95B00F90A7C /* VSCO-lite-uikit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E4ECC49C299C0585005A37F8 /* VSCO-lite-uikitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4ECC4A3299C0585005A37F8 /* Build configuration list for PBXNativeTarget "VSCO-lite-uikitTests" */;
+			buildPhases = (
+				E4ECC499299C0585005A37F8 /* Sources */,
+				E4ECC49A299C0585005A37F8 /* Frameworks */,
+				E4ECC49B299C0585005A37F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4ECC4A2299C0585005A37F8 /* PBXTargetDependency */,
+			);
+			name = "VSCO-lite-uikitTests";
+			productName = "VSCO-lite-uikitTests";
+			productReference = E4ECC49D299C0585005A37F8 /* VSCO-lite-uikitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					5B03CCB528EF50F000AFA693 = {
@@ -220,6 +272,10 @@
 					};
 					5B15E5F728F0E95B00F90A7C = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					E4ECC49C299C0585005A37F8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 5B15E5F728F0E95B00F90A7C;
 					};
 				};
 			};
@@ -238,6 +294,7 @@
 			targets = (
 				5B03CCB528EF50F000AFA693 /* VSCO-lite-swiftui */,
 				5B15E5F728F0E95B00F90A7C /* VSCO-lite-uikit */,
+				E4ECC49C299C0585005A37F8 /* VSCO-lite-uikitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +318,13 @@
 				5B15E60428F0E95C00F90A7C /* Assets.xcassets in Resources */,
 				E4ECC494299BFC9E005A37F8 /* README.md in Resources */,
 				5B15E60228F0E95B00F90A7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4ECC49B299C0585005A37F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +360,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4ECC499299C0585005A37F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4ECC4A9299C06B2005A37F8 /* URRequest.swift in Sources */,
+				E4ECC4A7299C0617005A37F8 /* DataProvider.swift in Sources */,
+				E4ECC4A6299C05D3005A37F8 /* FlickrImageSearch.swift in Sources */,
+				E4ECC4A0299C0585005A37F8 /* VSCO_lite_uikitTests.swift in Sources */,
+				E4ECC4A8299C062F005A37F8 /* FlickrAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4ECC4A2299C0585005A37F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B15E5F728F0E95B00F90A7C /* VSCO-lite-uikit */;
+			targetProxy = E4ECC4A1299C0585005A37F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5B15E60028F0E95B00F90A7C /* Main.storyboard */ = {
@@ -546,6 +630,44 @@
 			};
 			name = Release;
 		};
+		E4ECC4A4299C0585005A37F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCK3AB5HG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.QEDev.VSCO-lite-uikitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VSCO-lite-uikit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VSCO-lite-uikit";
+			};
+			name = Debug;
+		};
+		E4ECC4A5299C0585005A37F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCK3AB5HG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.QEDev.VSCO-lite-uikitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VSCO-lite-uikit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VSCO-lite-uikit";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +694,15 @@
 			buildConfigurations = (
 				5B15E60A28F0E95C00F90A7C /* Debug */,
 				5B15E60B28F0E95C00F90A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4ECC4A3299C0585005A37F8 /* Build configuration list for PBXNativeTarget "VSCO-lite-uikitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4ECC4A4299C0585005A37F8 /* Debug */,
+				E4ECC4A5299C0585005A37F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
