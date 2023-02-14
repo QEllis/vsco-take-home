@@ -15,16 +15,20 @@ final class FlickrImageResultCell: UICollectionViewCell {
         let imv = UIImageView()
         imv.translatesAutoresizingMaskIntoConstraints = false
         imv.contentMode = .scaleAspectFit
-        imv.backgroundColor = .purple
+        imv.backgroundColor = .clear
         return imv
     }()
 
-    private lazy var titleLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = .black
-        return lbl
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let act = UIActivityIndicatorView()
+        act.translatesAutoresizingMaskIntoConstraints = false
+        act.style = .medium
+        act.color = .black
+        act.hidesWhenStopped = true
+        return act
     }()
+
+    private var imageDataTask: URLSessionDataTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,28 +46,45 @@ final class FlickrImageResultCell: UICollectionViewCell {
 
     private func setLayout() {
         contentView.addSubview(resultImageView)
-        contentView.addSubview(titleLabel)
+        contentView.addSubview(loadingIndicator)
 
-        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-
-        resultImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+        resultImageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         resultImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         resultImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         resultImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
 
-        // QE - Remove. Test
-        resultImageView.heightAnchor.constraint(equalToConstant: .random(in: 100...600)).isActive = true
+        loadingIndicator.centerXAnchor.constraint(equalTo: resultImageView.centerXAnchor).isActive = true
+        loadingIndicator.centerYAnchor.constraint(equalTo: resultImageView.centerYAnchor).isActive = true
     }
 
     public func fillOut(with flickrPhoto: FlickrPhoto) {
+        guard let imageUrl = URL(string: flickrPhoto.imageUrl) else { return }
+
+        loadingIndicator.startAnimating()
+
+        imageDataTask = URLSession.shared.dataTask(with: URLRequest(url: imageUrl), completionHandler: { [weak self] data, response, error in
+            guard let self = self, let data = data else { return }
+            DispatchQueue.main.async {
+                self.setImage(with: data)
+                self.loadingIndicator.stopAnimating()
+            }
+        })
+        imageDataTask?.resume()
+    }
+
+    private func setImage(with imageData: Data) {
+        guard let image = UIImage(data: imageData) else {
+            resultImageView.backgroundColor = .black
+            return
+        }
+        resultImageView.image = image
         layoutIfNeeded()
-        titleLabel.text = flickrPhoto.title
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        imageDataTask?.cancel()
+        imageDataTask = nil
         resultImageView.image = nil
     }
 

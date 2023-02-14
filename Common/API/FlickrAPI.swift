@@ -10,14 +10,14 @@ struct FlickrAPI {
     /// Creates a URL request for fetching image data from Flickr
     /// - Parameter searchTerm: Images which title, description, or tags contain the `searchTerm` will be returned
     /// - Returns: URRequest
-    func fetchImageRequest(searchTerm: String) -> URLRequest {
+    func fetchImageRequest(searchTerm: String, page: Int = 1) -> URLRequest {
         let url = URL(string: Constants.BASE_URL + "/services/rest/")!
         let queryItems = [
             URLQueryItem(name: "api_key", value: Constants.API_KEY),
             URLQueryItem(name: "method", value: "flickr.photos.search"),
             URLQueryItem(name: "text", value: searchTerm),
             URLQueryItem(name: "format", value: "json"),
-            URLQueryItem(name: "page", value: "1"),
+            URLQueryItem(name: "page", value: String(describing: page)),
             URLQueryItem(name: "nojsoncallback", value: "1")
         ]
         var request = URLRequest(url: url, queryItems: queryItems)
