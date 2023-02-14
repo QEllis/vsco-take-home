@@ -15,7 +15,7 @@ class DataProvider {
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                print("HTTP Request Failed \(error)")
+                print("HTTP Request Failed \(error) for request: \(searchTerm), page: \(page)")
             }
             completion(data)
         }
