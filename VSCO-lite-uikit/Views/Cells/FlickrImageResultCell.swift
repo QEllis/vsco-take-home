@@ -62,17 +62,17 @@ final class FlickrImageResultCell: UICollectionViewCell {
 
         loadingIndicator.startAnimating()
 
-        imageDataTask = URLSession.shared.dataTask(with: URLRequest(url: imageUrl), completionHandler: { [weak self] data, response, error in
-            guard let self = self, let data = data else { return }
+        imageDataTask = FlickrAPI().fetchImageData(for: imageUrl, completion: { [weak self] imageData in
+            guard let self = self,
+                  let imageData = imageData else { return }
             DispatchQueue.main.async {
-                self.setImage(with: data)
-                self.loadingIndicator.stopAnimating()
+                self.setImage(with: imageData)
             }
         })
-        imageDataTask?.resume()
     }
 
     private func setImage(with imageData: Data) {
+        loadingIndicator.stopAnimating()
         guard let image = UIImage(data: imageData) else {
             resultImageView.backgroundColor = .black
             return

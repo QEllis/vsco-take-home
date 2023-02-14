@@ -27,4 +27,17 @@ struct FlickrAPI {
         request.httpMethod = "GET"
         return request
     }
+
+    func fetchImageData(for imageUrl: URL, completion: @escaping (Data?) -> Void) -> URLSessionDataTask {
+        let dataTask = URLSession.shared.dataTask(with: URLRequest(url: imageUrl), completionHandler: { data, response, error in
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            completion(data)
+        })
+        dataTask.resume()
+        return dataTask
+    }
+    
 }
