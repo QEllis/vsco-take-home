@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B03CCBA28EF50F000AFA693 /* VSCOLiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03CCB928EF50F000AFA693 /* VSCOLiteApp.swift */; };
+		5B03CCBC28EF50F000AFA693 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03CCBB28EF50F000AFA693 /* MainView.swift */; };
+		5B03CCBE28EF510800AFA693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B03CCBD28EF510800AFA693 /* Assets.xcassets */; };
+		5B03CCC128EF510800AFA693 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B03CCC028EF510800AFA693 /* Preview Assets.xcassets */; };
+		5B15E5FB28F0E95B00F90A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15E5FA28F0E95B00F90A7C /* AppDelegate.swift */; };
+		5B15E5FD28F0E95B00F90A7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15E5FC28F0E95B00F90A7C /* SceneDelegate.swift */; };
+		5B15E5FF28F0E95B00F90A7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15E5FE28F0E95B00F90A7C /* ViewController.swift */; };
+		5B15E60228F0E95B00F90A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B15E60028F0E95B00F90A7C /* Main.storyboard */; };
+		5B15E60428F0E95C00F90A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B15E60328F0E95C00F90A7C /* Assets.xcassets */; };
+		5B15E60728F0E95C00F90A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B15E60528F0E95C00F90A7C /* LaunchScreen.storyboard */; };
+		5B15E60C28F0EA2800F90A7C /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C9F4328EF8046004442E3 /* FlickrAPI.swift */; };
+		5B15E60D28F0EA2A00F90A7C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C9F4028EF8016004442E3 /* DataProvider.swift */; };
+		5B4B786628F7830B0096A395 /* URRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B786528F7830B0096A395 /* URRequest.swift */; };
+		5B4B786728F7830B0096A395 /* URRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B786528F7830B0096A395 /* URRequest.swift */; };
+		5B9C9F4128EF8016004442E3 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C9F4028EF8016004442E3 /* DataProvider.swift */; };
+		5B9C9F4428EF8046004442E3 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C9F4328EF8046004442E3 /* FlickrAPI.swift */; };
+		E4ECC489299B2423005A37F8 /* FlickrImageResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */; };
+		E4ECC48A299B2423005A37F8 /* FlickrImageResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B03CCB628EF50F000AFA693 /* VSCO-lite-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VSCO-lite-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B03CCB928EF50F000AFA693 /* VSCOLiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSCOLiteApp.swift; sourceTree = "<group>"; };
+		5B03CCBB28EF50F000AFA693 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5B03CCBD28EF510800AFA693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B03CCC028EF510800AFA693 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B15E5F828F0E95B00F90A7C /* VSCO-lite-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VSCO-lite-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B15E5FA28F0E95B00F90A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B15E5FC28F0E95B00F90A7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5B15E5FE28F0E95B00F90A7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B15E60128F0E95B00F90A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B15E60328F0E95C00F90A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B15E60628F0E95C00F90A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B15E60828F0E95C00F90A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4B786528F7830B0096A395 /* URRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URRequest.swift; sourceTree = "<group>"; };
+		5B9C9F4028EF8016004442E3 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		5B9C9F4328EF8046004442E3 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageResultCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B03CCB328EF50F000AFA693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B15E5F528F0E95B00F90A7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B03CCAD28EF50F000AFA693 = {
+			isa = PBXGroup;
+			children = (
+				5B15E5F328F0E90600F90A7C /* Common */,
+				5B03CCB828EF50F000AFA693 /* VSCO-lite-swiftui */,
+				5B15E5F928F0E95B00F90A7C /* VSCO-lite-uikit */,
+				5B03CCB728EF50F000AFA693 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B03CCB728EF50F000AFA693 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B03CCB628EF50F000AFA693 /* VSCO-lite-swiftui.app */,
+				5B15E5F828F0E95B00F90A7C /* VSCO-lite-uikit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B03CCB828EF50F000AFA693 /* VSCO-lite-swiftui */ = {
+			isa = PBXGroup;
+			children = (
+				5B03CCB928EF50F000AFA693 /* VSCOLiteApp.swift */,
+				5B03CCBB28EF50F000AFA693 /* MainView.swift */,
+				5B03CCBD28EF510800AFA693 /* Assets.xcassets */,
+				5B03CCBF28EF510800AFA693 /* Preview Content */,
+			);
+			path = "VSCO-lite-swiftui";
+			sourceTree = "<group>";
+		};
+		5B03CCBF28EF510800AFA693 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B03CCC028EF510800AFA693 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B15E5F328F0E90600F90A7C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C9F4028EF8016004442E3 /* DataProvider.swift */,
+				5B9C9F4228EF8037004442E3 /* API */,
+				5B4B786528F7830B0096A395 /* URRequest.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5B15E5F928F0E95B00F90A7C /* VSCO-lite-uikit */ = {
+			isa = PBXGroup;
+			children = (
+				E4ECC486299B2400005A37F8 /* Views */,
+				5B15E5FA28F0E95B00F90A7C /* AppDelegate.swift */,
+				5B15E5FC28F0E95B00F90A7C /* SceneDelegate.swift */,
+				5B15E5FE28F0E95B00F90A7C /* ViewController.swift */,
+				5B15E60028F0E95B00F90A7C /* Main.storyboard */,
+				5B15E60328F0E95C00F90A7C /* Assets.xcassets */,
+				5B15E60528F0E95C00F90A7C /* LaunchScreen.storyboard */,
+				5B15E60828F0E95C00F90A7C /* Info.plist */,
+			);
+			path = "VSCO-lite-uikit";
+			sourceTree = "<group>";
+		};
+		5B9C9F4228EF8037004442E3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C9F4328EF8046004442E3 /* FlickrAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E4ECC486299B2400005A37F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4ECC487299B2409005A37F8 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4ECC487299B2409005A37F8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E4ECC488299B2423005A37F8 /* FlickrImageResultCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B03CCB528EF50F000AFA693 /* VSCO-lite-swiftui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B03CCC428EF510800AFA693 /* Build configuration list for PBXNativeTarget "VSCO-lite-swiftui" */;
+			buildPhases = (
+				5B03CCB228EF50F000AFA693 /* Sources */,
+				5B03CCB328EF50F000AFA693 /* Frameworks */,
+				5B03CCB428EF50F000AFA693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VSCO-lite-swiftui";
+			productName = "VSCO-lite";
+			productReference = 5B03CCB628EF50F000AFA693 /* VSCO-lite-swiftui.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B15E5F728F0E95B00F90A7C /* VSCO-lite-uikit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B15E60928F0E95C00F90A7C /* Build configuration list for PBXNativeTarget "VSCO-lite-uikit" */;
+			buildPhases = (
+				5B15E5F428F0E95B00F90A7C /* Sources */,
+				5B15E5F528F0E95B00F90A7C /* Frameworks */,
+				5B15E5F628F0E95B00F90A7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VSCO-lite-uikit";
+			productName = "VSCO-lite-uikit";
+			productReference = 5B15E5F828F0E95B00F90A7C /* VSCO-lite-uikit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B03CCAE28EF50F000AFA693 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					5B03CCB528EF50F000AFA693 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					5B15E5F728F0E95B00F90A7C = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 5B03CCB128EF50F000AFA693 /* Build configuration list for PBXProject "VSCO-lite" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B03CCAD28EF50F000AFA693;
+			productRefGroup = 5B03CCB728EF50F000AFA693 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B03CCB528EF50F000AFA693 /* VSCO-lite-swiftui */,
+				5B15E5F728F0E95B00F90A7C /* VSCO-lite-uikit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B03CCB428EF50F000AFA693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B03CCC128EF510800AFA693 /* Preview Assets.xcassets in Resources */,
+				5B03CCBE28EF510800AFA693 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B15E5F628F0E95B00F90A7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B15E60728F0E95C00F90A7C /* LaunchScreen.storyboard in Resources */,
+				5B15E60428F0E95C00F90A7C /* Assets.xcassets in Resources */,
+				5B15E60228F0E95B00F90A7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B03CCB228EF50F000AFA693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B4B786628F7830B0096A395 /* URRequest.swift in Sources */,
+				E4ECC489299B2423005A37F8 /* FlickrImageResultCell.swift in Sources */,
+				5B9C9F4128EF8016004442E3 /* DataProvider.swift in Sources */,
+				5B03CCBC28EF50F000AFA693 /* MainView.swift in Sources */,
+				5B03CCBA28EF50F000AFA693 /* VSCOLiteApp.swift in Sources */,
+				5B9C9F4428EF8046004442E3 /* FlickrAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B15E5F428F0E95B00F90A7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B15E5FF28F0E95B00F90A7C /* ViewController.swift in Sources */,
+				5B15E5FB28F0E95B00F90A7C /* AppDelegate.swift in Sources */,
+				5B15E60D28F0EA2A00F90A7C /* DataProvider.swift in Sources */,
+				E4ECC48A299B2423005A37F8 /* FlickrImageResultCell.swift in Sources */,
+				5B15E5FD28F0E95B00F90A7C /* SceneDelegate.swift in Sources */,
+				5B4B786728F7830B0096A395 /* URRequest.swift in Sources */,
+				5B15E60C28F0EA2800F90A7C /* FlickrAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5B15E60028F0E95B00F90A7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B15E60128F0E95B00F90A7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B15E60528F0E95C00F90A7C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B15E60628F0E95C00F90A7C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B03CCC228EF510800AFA693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B03CCC328EF510800AFA693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B03CCC528EF510800AFA693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VSCO-lite-swiftui/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.visualsupply.cam.VSCO-lite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B03CCC628EF510800AFA693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VSCO-lite-swiftui/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.visualsupply.cam.VSCO-lite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B15E60A28F0E95C00F90A7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASKTD82Z24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VSCO-lite-uikit/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.visualsupply.cam.VSCO-lite-uikit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B15E60B28F0E95C00F90A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASKTD82Z24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VSCO-lite-uikit/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.visualsupply.cam.VSCO-lite-uikit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B03CCB128EF50F000AFA693 /* Build configuration list for PBXProject "VSCO-lite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B03CCC228EF510800AFA693 /* Debug */,
+				5B03CCC328EF510800AFA693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B03CCC428EF510800AFA693 /* Build configuration list for PBXNativeTarget "VSCO-lite-swiftui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B03CCC528EF510800AFA693 /* Debug */,
+				5B03CCC628EF510800AFA693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B15E60928F0E95C00F90A7C /* Build configuration list for PBXNativeTarget "VSCO-lite-uikit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B15E60A28F0E95C00F90A7C /* Debug */,
+				5B15E60B28F0E95C00F90A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B03CCAE28EF50F000AFA693 /* Project object */;
+}
