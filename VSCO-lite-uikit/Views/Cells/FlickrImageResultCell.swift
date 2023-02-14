@@ -9,6 +9,8 @@ import UIKit
 
 final class FlickrImageResultCell: UICollectionViewCell {
 
+    static let reuseIdentifier = "FlickerImageCellId"
+
     private lazy var resultImageView: UIImageView = {
         let imv = UIImageView()
         imv.translatesAutoresizingMaskIntoConstraints = false
@@ -34,9 +36,16 @@ final class FlickrImageResultCell: UICollectionViewCell {
     private func setLayout() {
         contentView.addSubview(resultImageView)
         resultImageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        resultImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        resultImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         resultImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         resultImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+
+        // QE - Remove. Test
+        resultImageView.heightAnchor.constraint(equalToConstant: .random(in: 100...600)).isActive = true
+    }
+
+    public func fillOut(with data: Data) {
+        layoutIfNeeded()
     }
 
     override func prepareForReuse() {
